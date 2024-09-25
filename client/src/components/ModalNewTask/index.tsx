@@ -25,8 +25,8 @@ const ModalNewTask = ({ isOpen, onClose, id = null, isProjectIdRequired  }: Prop
 //   const isProjectIdRequired = location.pathname === '/pr';
 
   const handleSubmit = async () => {
-    // if (!title || !authorUserId || !(id !== null || projectId)) return;
-    if (!title || !authorUserId) return;
+    if (!title || !authorUserId || !(id !== null || projectId)) return;
+    // if (!title || !authorUserId) return;
 
     const formattedStartDate = formatISO(new Date(startDate), {
       representation: "complete",
